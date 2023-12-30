@@ -1,14 +1,14 @@
-import { OrbitControls } from "@react-three/drei";
-import React from "react";
+import { OrbitControls, ScrollControls } from "@react-three/drei";
+import Office from "./Office";
 
 const Experience = () => {
   return (
     <>
-      <OrbitControls />
-      <mesh>
-        <boxGeometry />
-        <meshNormalMaterial />
-      </mesh>
+      <ambientLight intensity={1} />
+      <OrbitControls enableZoom={false} />
+      <ScrollControls pages={3} damping={0.25}>
+        <Office />
+      </ScrollControls>
     </>
   );
 };
